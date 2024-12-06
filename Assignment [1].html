@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Includes the Prism.js library for syntax highlighting when writing codes -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+
+  <title>Assignment [1]</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap">
+
+  <style>
+        body 
+        {
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'Ubuntu', 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        header, footer 
+        {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header h1, footer p 
+        {
+            margin: 0;
+        }
+        section 
+        {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1000px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 20px
+        }
+        h2 
+        {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+        }
+        h3 
+        {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 0.5rem;
+        }
+        .table-container 
+        {
+            overflow-x: auto;
+            text-align: justify;
+        }
+        table 
+        {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td 
+        {
+            padding: 0.75rem;
+            text-align: center; /* Center the text */
+            border: 1px solid #dee2e6;
+        }
+        th 
+        {
+            background-color: #007bff;
+            color: #fff;
+        }
+        ul 
+        {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        ul ul 
+        {
+            list-style-type: circle;
+        }
+        a 
+        {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover 
+        {
+            text-decoration: underline;
+        }
+        .highlighted 
+        {
+            background-color: #ffeb3b;
+            padding: 0 0.25rem;
+        }
+        .colored-word 
+        {
+            color: #dc3545;
+        }
+        .center-container 
+        {
+            text-align: center;
+        }
+        .text-container 
+        {
+            text-align: justify;
+            margin-top: 1rem;
+        }
+        .demo-link 
+        {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+  </style>
+</head>
+
+<body>
+    <header>
+        <div class="center-container">
+            <h1>Library System</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section id="Overview">
+            <h2>Overview</h2>
+                <div class="text-container">
+                    <p>Edmon Low Library,  a library system encompasses several essential features. The library operates daily from 9 am to 5 pm and is situated on Oklahoma State University campus with designated address. It supports functionalities for adding books, borrowing and returning them, and checking their availability.</p>
+                    <p>To achieve this, a class named EdmonLowLibrary should be created to encapsulate the library's attributes and behaviors. This class must include instance fields and methods to manage the library operations effectively. </p>
+                </div>
+        </section>
+    
+        <section id="Library Features">
+            <h2>Library Features</h2>
+                <div class="text-container">
+                    <p>Edmon Low library has the following features:</p>
+                        <ul>
+                            <li><span class="colored-word">Opening Hours</span>: 9 am to 5 pm</li>
+                            <li><span class="colored-word">Address</span>: 216 Library, Oklahoma State University, Stillwater, OK 74078</li>
+                            <li><span class="colored-word">Operations</span>:</li>
+                                <ul>
+                                    <li>Books can be added to the library.</li>
+                                    <li>Books can be borrowed from and returned (added back) to the library.</li>
+                                    <li>The availability of books can be checked.</li>
+                                </ul>
+                        </ul>
+                </div>
+        </section>
+    
+        <section id="Implementation Requirements">
+            <h2>Implementation Requirements</h2>
+                <div class="text-container">
+                    <ul>
+                        <li>A class named <span class="colored-word">EdmonLowLibrary</span> should be created to represent the library system.</li>
+                        <li>Implement all instance fields and methods required to manage the library system.</li>
+                        <li>Implement a <span class="colored-word">constructor</span> to initialize the instance fields (attributes).</li>
+                        <li>Implement an <span class="colored-word">instance</span> method to display the library's opening hours and address.</li>
+                        <li>Implement each library operation as an <span class="colored-word">instance</span> method.</li>
+                    </ul>
+                </div>
+        </section>
+    
+        <section id="Code Template">
+            <h2>Code Template</h2>
+                <div class="text-container">
+                    <p>Copy the following Java code template to your IDE and complete the provided code:</p>
+                    <pre><code class="language-java">/****************************** Edmon Low Library System ****************************
+* Library Operations such as book management, borrowing, and availability checks.
+* @author Type Your Name Here
+****************************************************************************************/
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class EdmonLowLibrary 
+{
+    // Instance Fields
+    private String address;
+    private String openHours;
+
+    // Static (Non-Instance) Fields
+    static ArrayList&lt;String&gt; books = new ArrayList&lt;&gt;();
+
+    // A constructor method to initialize fields - address, openHours, and books
+
+
+    // An instance method to print the library's opening hours and address
+    
+
+    // An instance method to add (or return) books to the library
+    
+
+    // An instance method to borrow books from the library
+    
+
+    // An instance method to print the titles of available books in the library
+    
+
+    // ------------------- Main Method ------------------- //
+    public static void main(String[] args) 
+    {
+        // Create an instance (object) of EdmonLowLibrary and assign it to a reference variable called 'edmonLowLibrary' of type EdmonLowLibrary
+
+        // Call a method to print the library opening hours and address
+
+        // Call the method 'isBorrowed' to borrow 'The Lords of the Rings' book from Edmon Low library
+
+        // Call the method 'isBorrowed' to borrow 'The Hobbit' book from Edmon Low library
+        
+        // Call the method 'printAvailableBooks' to print the titles of all currently available books
+        
+        // Call the method 'addBook' to return 'The Lords of the Rings' to Edmon Low Library
+        
+        // Call the method 'isBorrowed' to borrow 'A Tale of Two Cities' from Edmon Low library
+
+        // Call the method 'printAvailableBooks' to print the titles of all currently available books
+
+    }
+}</code></pre>
+                </div>
+        </section>
+
+        <section>
+            <h2>Sample Output</h2>
+                <div class="text-container">
+                    <p>Below is a sample output:</p>
+                        <pre style="color: rgb(115, 66, 66); font-family: 'Ubuntu'; font-size: 16px; font-weight: bold;">
+                            An Edmon Low librarian is adding six books to the library system ...
+                            Type a book title: The Da Vinci Code
+                            Type a book title: Le Petit Prince
+                            Type a book title: A Tale of Two Cities
+                            Type a book title: The Lord of the Rings
+                            Type a book title: Kill a Mockingbird
+                            Type a book title: Pride and Prejudice
+                            
+                            Edmon Low Library: 
+                                            Open Hours: 9 am - 5 pm
+                                            Address: 216 Library, Oklahoma State University, Stillwater, OK 74078
+                            
+                            Someone requested 'The Lord of the Rings', which is currently available and ready to get picked!
+                            
+                            Someone requested 'The Hobbit', which is not currently available!
+                            
+                            Available books:
+                            The Da Vinci Code
+                            Le Petit Prince
+                            A Tale of Two Cities
+                            Kill a Mockingbird
+                            Pride and Prejudice
+                            
+                            Someone has just returned 'The Lord of the Rings' to the library.
+                            
+                            Someone requested 'A Tale of Two Cities', which is currently available and ready to get picked!
+                            
+                            Available books:
+                            The Da Vinci Code
+                            Le Petit Prince
+                            Kill a Mockingbird
+                            Pride and Prejudice
+                            The Lord of the Rings
+                        </pre>
+                        <p>Click <a href="https://cs.okstate.edu/~aalthou/AssignmentDemo/Assignment[1].mp4">here</a> to watch a short demonstration of the Edmon Low Library System and its various operations.</p>
+                </div>
+        </section>
+
+        <section>
+            <h2>Notes</h2>
+                <div class="text-container">
+                    <ul>
+                        <li>Check out the short demo and sample output to understand the expected implementation flow.</li>
+                        <li>The list of book titles to be added by the librarian includes:</li>
+                            <ul>
+                                <li>The Da Vinci Code</li>
+                                <li>Le Petit Prince</li>
+                                <li>A Tale of Two Cities</li>
+                                <li>The Lord of the Rings</li>
+                                <li>Kill a Mockingbird</li>
+                                <li>Pride and Prejudice</li>
+                            </ul>
+                        </ul>
+                </div>
+        </section>
+
+        <section id="Submission">
+            <h2>Submission</h2>
+               <div class="text-container">
+                    <ul>
+                        <li>Complete the implementation and submit the <span class="colored-word">EdmonLowLibrary.java</span> file on Canvas by <strong>Friday, September 6, 2024, 11:59 pm</strong>. Refer to the syllabus for the late submission policy.</li>
+                        <li>Ensure your code includes your name and course in the documentation comment section.</li>
+                        <li>Adhere to best programming practices and use the provided programming template to complete the task.</li>
+                        <li>The rubric table below is used for grading criteria:</li>
+                            <div class="table-container">
+                                <table>
+                                    <tr>
+                                        <th>Points</th>
+                                        <th>Description</th>
+                                    </tr>
+                                    <tr>
+                                        <td>-2 pt</td>
+                                        <td>If failure to complete a single method</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-1 pt</td>
+                                        <td>If failure to call a method</td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </ul>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Oklahoma State University -  Department of Computer Science</p>
+    </footer>
+    
+</body>
+</html>
